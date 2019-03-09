@@ -9,14 +9,14 @@ export default class View {
     this.showSuggestion = '';
     const noSuggestion = 0;
     if (suggestionValArr.length === noSuggestion) {
-      this.removeSuggestion()
+      this.removeSuggestion(this.autocomplete);
     } else {
       this.renderSuggestion(suggestionValArr);
     }
   }
 
-  removeSuggestion() {
-    this.autocomplete.classList.remove('search-autocomplete-show');
+  removeSuggestion(autocomplete) {
+    autocomplete.classList.remove('search-autocomplete-show');
   }
 
   renderSuggestion(suggestionArr) {
