@@ -8,11 +8,7 @@ export default class View {
   isSuggestionVal(suggestionValArr) {
     this.showSuggestion = '';
     const noSuggestion = 0;
-    if (suggestionValArr.length === noSuggestion) {
-      this.removeSuggestion(this.autocomplete);
-    } else {
-      this.renderSuggestion(suggestionValArr);
-    }
+    (suggestionValArr.length === noSuggestion) ? this.removeSuggestion(this.autocomplete) : this.renderSuggestion(suggestionValArr)
   }
 
   removeSuggestion(autocomplete) {
@@ -21,11 +17,10 @@ export default class View {
 
   renderSuggestion(suggestionArr) {
     suggestionArr.forEach(suggestion => {
-      let splitKeyword = suggestion.value.split(' ');
-      let joinKeyword = splitKeyword.join('+');
+      let keyword = suggestion.value.split(' ').join('+');
       this.showSuggestion += `
       <li class = "suggestion">
-        <a class = "suggestionLink" href = "https://www.amazon.com/s?k=${joinKeyword}&prefix=?&ref=${suggestion.refTag}">  
+        <a class = "suggestionLink" href = "https://www.amazon.com/s?k=${keyword}&prefix=?&ref=${suggestion.refTag}">  
          ${suggestion.value}
         </a>
       </li>`

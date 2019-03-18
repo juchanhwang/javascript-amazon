@@ -29,4 +29,3 @@ document.addEventListener('DOMContentLoaded', () => {
     search: document.querySelector('.search-tab')
   });
 })
-

@@ -5,12 +5,11 @@ export default class Controller {
     this.optionObj = optionObj;
     this.addEvent();
   }
-  
+
   addEvent() {
     this.optionObj.search.addEventListener('input', this.getFetchData.bind(this));
     this.autocomplete = document.querySelector('.search-autocomplete');
-    const body = document.querySelector('body');
-    body.addEventListener('click', this.view.removeSuggestion.bind(this, this.autocomplete));
+    this.optionObj.search.addEventListener('blur', this.view.removeSuggestion.bind(this, this.autocomplete));
   }
 
   getFetchData(event) {
