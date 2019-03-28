@@ -3,16 +3,19 @@ export default class View {
     this.autocompleteUl = document.querySelector('.autocomplete-ul');
     this.autocomplete = document.querySelector('.search-autocomplete');
     this.showSuggestion = '';
+    this.minTime = 100;
   }
 
   isSuggestionVal(suggestionValArr) {
     this.showSuggestion = '';
     const noSuggestion = 0;
-    (suggestionValArr.length === noSuggestion) ? this.removeSuggestion(this.autocomplete) : this.renderSuggestion(suggestionValArr)
+    (suggestionValArr.length === noSuggestion) ? this.removeSuggestion(this.autocomplete, this.minTime) : this.renderSuggestion(suggestionValArr)
   }
 
-  removeSuggestion(autocomplete) {
-    autocomplete.classList.remove('search-autocomplete-show');
+  removeSuggestion(autocomplete, minTime) {
+    setTimeout(() => {
+      autocomplete.classList.remove('search-autocomplete-show');
+    }, minTime);
   }
 
   renderSuggestion(suggestionArr) {

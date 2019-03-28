@@ -1,5 +1,6 @@
 export default class Model {
-  constructor() {
+  constructor(data) {
+    this.data = data
   }
 
   fetchData(responseUrl) {
