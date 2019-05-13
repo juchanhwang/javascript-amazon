@@ -3,11 +3,13 @@ export default class Controller {
     this.view = view;
     this.model = model;
     this.optionObj = optionObj;
+    this.count = -1;
     this.addEvent();
   }
 
   addEvent() {
     this.optionObj.search.addEventListener('input', this.getFetchData.bind(this));
+    this.optionObj.search.addEventListener('keydown', this.handler.bind(this));
     this.autocomplete = document.querySelector('.search-autocomplete');
     this.optionObj.search.addEventListener('blur', this.view.removeSuggestion.bind(this, this.autocomplete, this.view.delaySec));
   }
@@ -21,5 +23,22 @@ export default class Controller {
 
   showSuggestionVal(suggestionArr) {
     this.view.isSuggestionVal(suggestionArr);
+  }
+
+  handler(e) {
+    let li = document.querySelectorAll('.suggestion');
+    let liArr = [];
+    // for (var el of li) liArr.push(el.textContent.trim());
+    console.log(this.count)
+    if (e.code === 'ArrowDown' && this.count < 11) {
+      this.count++;
+      console.log('arr', li[this.count]);
+      li[this.count].style.background = `#eee`;
+    }
+
+    else if (e.code === 'ArrowUp' && this.count >= 0) {
+      this.count--;
+      console.log('arr', li[this.count]);
+    } else { this.count = -1 }
   }
 }

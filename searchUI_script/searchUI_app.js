@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const model = new Model();
   const view = new View();
   new Controller(view, model, {
-    search: document.querySelector('.search-tab')
+    search: document.querySelector('.search-tab'),
+    suggestions: document.querySelector('.autocomplete-ul'),
   });
 })
