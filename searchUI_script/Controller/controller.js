@@ -3,7 +3,11 @@ export default class Controller {
     this.view = view;
     this.model = model;
     this.optionObj = optionObj;
-    this.count = -1;
+    this.initIdx = -1;
+    this.maxIdx = 10;
+    this.minIdx = 0;
+    this.idx = this.initIdx;
+    this.removeHover = 11;
     this.addEvent();
   }
 
@@ -26,19 +30,31 @@ export default class Controller {
   }
 
   handler(e) {
-    let li = document.querySelectorAll('.suggestion');
-    let liArr = [];
-    // for (var el of li) liArr.push(el.textContent.trim());
-    console.log(this.count)
-    if (e.code === 'ArrowDown' && this.count < 11) {
-      this.count++;
-      console.log('arr', li[this.count]);
-      li[this.count].style.background = `#eee`;
+    let suggestionVal = document.querySelectorAll('.suggestion');
+    let searchVal = document.querySelectorAll('.suggestion > a');
+
+    if (e.code === 'ArrowDown' && this.idx < this.maxIdx) {
+      this.idx++;
+      this.optionObj.search.value = searchVal[this.idx].text.trim();
+      suggestionVal[this.idx].style.background = `#eee`;
+      this.idx === this.minIdx ? null : suggestionVal[this.idx - 1].style.background = `transparent`;
     }
 
-    else if (e.code === 'ArrowUp' && this.count >= 0) {
-      this.count--;
-      console.log('arr', li[this.count]);
-    } else { this.count = -1 }
+    else if (e.code === 'ArrowDown' && (this.idx === this.maxIdx || this.idx === this.removeHover)) {
+      suggestionVal[this.maxIdx].style.background = `transparent`;
+      this.idx = this.initIdx;
+    }
+
+    else if (e.code === 'ArrowUp' && this.idx > this.minIdx) {
+      this.idx--;
+      this.optionObj.search.value = searchVal[this.idx].text.trim();
+      suggestionVal[this.idx].style.background = `#eee`;
+      this.idx === this.maxIdx ? null : suggestionVal[this.idx + 1].style.background = `transparent`;
+    }
+
+    else if (e.code === 'ArrowUp' && this.idx === this.minIdx) {
+      suggestionVal[this.minIdx].style.background = `transparent`;
+      this.idx = this.removeHover;
+    }
   }
 }
