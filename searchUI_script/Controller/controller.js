@@ -57,6 +57,6 @@ export default class Controller {
     let keyword = this.optionObj.search.value.split(' ').join('+');
     let searchUrl = `s?k=${keyword}`;
     document.getElementById('searchbar_form').base = 'https://www.amazon.com';
-    document.getElementById('searchbar_form').action = searchUrl;
+    document.getElementById('searchbar_form').action = searchUrl; 
   }
 }
