@@ -58,8 +58,5 @@ export default class Controller {
     let searchUrl = `s?k=${keyword}`;
     document.getElementById('searchbar_form').base = 'https://www.amazon.com';
     document.getElementById('searchbar_form').action = searchUrl;
-    console.log(document.getElementById('searchbar_form').action)
-    console.log(document.getElementById('searchbar_form').base)
-
   }
 }
