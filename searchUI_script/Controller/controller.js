@@ -40,14 +40,14 @@ export default class Controller {
     }
 
     else if (e.code === 'ArrowDown' && (this.idx === this.maxIdx || this.idx === this.removeHover)) {
-      keywordNodeLs[this.idx] ? suggestionVal[this.maxIdx].style.background = `transparent` : null;
+      keywordNodeLs[this.idx] ? suggestionVal[this.maxIdx].style.background = `transparent`: null;
       this.idx = this.initIdx;
     }
 
     else if (e.code === 'ArrowUp' && this.idx > this.minIdx) {
       this.idx--;
       keywordNodeLs[this.idx] ? [this.optionObj.search.value, suggestionVal[this.idx].style.background] = [keywordNodeLs[this.idx].text.trim(), `#eee`] : null;
-      keywordNodeLs[this.idx] && (this.idx !== this.maxIdx) ? suggestionVal[this.idx + 1].style.background = `transparent` : null;
+      this.idx !== this.maxIdx ? suggestionVal[this.idx + 1].style.background = `transparent` : null;
     }
 
     else if (e.code === 'ArrowUp' && this.idx === this.minIdx) {
@@ -55,8 +55,7 @@ export default class Controller {
       this.idx = this.removeHover;
     }
     let keyword = this.optionObj.search.value.split(' ').join('+');
-    let searchUrl = `s?k=${keyword}`;
-    document.getElementById('searchbar_form').base = 'https://www.amazon.com';
-    document.getElementById('searchbar_form').action = searchUrl; 
+    let searchUrl = `https://www.amazon.com/s?k=${keyword}`;
+    document.getElementById('searchbar_form').action = searchUrl;
   }
 }
