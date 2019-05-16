@@ -32,28 +32,41 @@ export default class Controller {
   handler(e) {
     let suggestionVal = document.querySelectorAll('.suggestion');
     let keywordNodeLs = document.querySelectorAll('.suggestion > a');
-
     if (e.code === 'ArrowDown' && this.idx < this.maxIdx) {
       this.idx++;
-      keywordNodeLs[this.idx] ? [this.optionObj.search.value, suggestionVal[this.idx].style.background] = [keywordNodeLs[this.idx].text.trim(), `#eee`] : null;
-      keywordNodeLs[this.idx] && (this.idx !== this.minIdx) ? suggestionVal[this.idx - 1].style.background = `transparent` : null;
+      this.getKeyWordBackground(suggestionVal, keywordNodeLs, this.minIdx, this.idx - 1);
     }
 
     else if (e.code === 'ArrowDown' && (this.idx === this.maxIdx || this.idx === this.removeHover)) {
-      keywordNodeLs[this.idx] ? suggestionVal[this.maxIdx].style.background = `transparent`: null;
+      this.getKeyWordTransparent(keywordNodeLs, suggestionVal, this.maxIdx)
       this.idx = this.initIdx;
     }
 
     else if (e.code === 'ArrowUp' && this.idx > this.minIdx) {
       this.idx--;
-      keywordNodeLs[this.idx] ? [this.optionObj.search.value, suggestionVal[this.idx].style.background] = [keywordNodeLs[this.idx].text.trim(), `#eee`] : null;
-      this.idx !== this.maxIdx ? suggestionVal[this.idx + 1].style.background = `transparent` : null;
+      this.getKeyWordBackground(suggestionVal, keywordNodeLs, this.maxIdx, this.idx + 1);
     }
 
     else if (e.code === 'ArrowUp' && this.idx === this.minIdx) {
-      keywordNodeLs[this.idx] ? suggestionVal[this.minIdx].style.background = `transparent` : null;
+      this.getKeyWordTransparent(keywordNodeLs, suggestionVal, this.minIdx)
       this.idx = this.removeHover;
     }
+
+    this.getKeyWordUrl();
+  }
+
+  getKeyWordBackground(suggestionVal, keywordNodeLs, MinOrMaxIdx, nextOrPrevIdx) {
+    keywordNodeLs[this.idx] ?
+      [this.optionObj.search.value, suggestionVal[this.idx].style.background] = [keywordNodeLs[this.idx].text.trim(), `#eee`] : null;
+    keywordNodeLs[this.idx] && (this.idx !== MinOrMaxIdx) ?
+      suggestionVal[nextOrPrevIdx].style.background = `transparent` : null;
+  }
+
+  getKeyWordTransparent(keywordNodeLs, suggestionVal, MinOrMaxIdx) {
+    keywordNodeLs[this.idx] ? suggestionVal[MinOrMaxIdx].style.background = `transparent` : null;
+  }
+
+  getKeyWordUrl() {
     let keyword = this.optionObj.search.value.split(' ').join('+');
     let searchUrl = `https://www.amazon.com/s?k=${keyword}`;
     document.getElementById('searchbar_form').action = searchUrl;
