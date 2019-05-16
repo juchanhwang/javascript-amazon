@@ -15,7 +15,7 @@ export default class View {
   }
 
   removeSuggestion(autocomplete, delaySec) {
-    // setTimeout(() => autocomplete.classList.remove('search-autocomplete-show'), delaySec);
+    setTimeout(() => autocomplete.classList.remove('search-autocomplete-show'), delaySec);
   }
 
   renderSuggestion(suggestionArr) {

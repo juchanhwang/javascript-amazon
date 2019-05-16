@@ -28,5 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
   new Controller(view, model, {
     search: document.querySelector('.search-tab'),
     suggestions: document.querySelector('.autocomplete-ul'),
+    form: document.querySelector('#searchbar_form'),
   });
 })
