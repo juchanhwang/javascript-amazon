@@ -1,7 +1,6 @@
 export default class View {
   constructor() {
     this.searchTab = document.querySelector('.search-tab');
-    console.log(this.searchTab);
     this.autocompleteUl = document.querySelector('.autocomplete-ul');
     this.autocomplete = document.querySelector('.search-autocomplete');
     this.showSuggestion = '';
