@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/amazon.html',
+  entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, 'dist/js')
     ,
