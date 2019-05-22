@@ -1,9 +1,9 @@
 import PlanCardClickEvent from "./planBarUI/js/planCardClickEvent.js";
 import PlanBarScrollEvent from "./planBarUI/js/planBarScrollEvent.js";
 import Carousel from "./carouselUI/js/carousel.js";
-import Model from "./searchUI_script/Model/model.js";
-import View from "./searchUI_script/View/view.js";
-import Controller from "./searchUI_script/Controller/controller.js";
+import Model from "./searchUI/Model/model.js";
+import View from "./searchUI/View/view.js";
+import Controller from "./searchUI/Controller/controller.js";
 
 const planBar = document.querySelector(".nav-plan-bar");
 const planCard = document.querySelector(".plan-card");

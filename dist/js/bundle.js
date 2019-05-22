@@ -187,9 +187,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _planBarUI_js_planCardClickEvent_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./planBarUI/js/planCardClickEvent.js */ "./src/planBarUI/js/planCardClickEvent.js");
 /* harmony import */ var _planBarUI_js_planBarScrollEvent_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./planBarUI/js/planBarScrollEvent.js */ "./src/planBarUI/js/planBarScrollEvent.js");
 /* harmony import */ var _carouselUI_js_carousel_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./carouselUI/js/carousel.js */ "./src/carouselUI/js/carousel.js");
-/* harmony import */ var _searchUI_script_Model_model_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./searchUI_script/Model/model.js */ "./src/searchUI_script/Model/model.js");
-/* harmony import */ var _searchUI_script_View_view_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./searchUI_script/View/view.js */ "./src/searchUI_script/View/view.js");
-/* harmony import */ var _searchUI_script_Controller_controller_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./searchUI_script/Controller/controller.js */ "./src/searchUI_script/Controller/controller.js");
+/* harmony import */ var _searchUI_Model_model_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./searchUI/Model/model.js */ "./src/searchUI/Model/model.js");
+/* harmony import */ var _searchUI_View_view_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./searchUI/View/view.js */ "./src/searchUI/View/view.js");
+/* harmony import */ var _searchUI_Controller_controller_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./searchUI/Controller/controller.js */ "./src/searchUI/Controller/controller.js");
 
 
 
@@ -229,9 +229,9 @@ document.addEventListener("DOMContentLoaded", () => {
   planCardClickEvent.openPlanCard();
   planCardClickEvent.closePlanCard();
   carousel.init();
-  const model = new _searchUI_script_Model_model_js__WEBPACK_IMPORTED_MODULE_3__["default"]();
-  const view = new _searchUI_script_View_view_js__WEBPACK_IMPORTED_MODULE_4__["default"]();
-  new _searchUI_script_Controller_controller_js__WEBPACK_IMPORTED_MODULE_5__["default"](view, model, {
+  const model = new _searchUI_Model_model_js__WEBPACK_IMPORTED_MODULE_3__["default"]();
+  const view = new _searchUI_View_view_js__WEBPACK_IMPORTED_MODULE_4__["default"]();
+  new _searchUI_Controller_controller_js__WEBPACK_IMPORTED_MODULE_5__["default"](view, model, {
     search: document.querySelector(".search-tab"),
     suggestions: document.querySelector(".autocomplete-ul"),
     form: document.querySelector("#searchbar_form")
@@ -330,10 +330,10 @@ class PlanCardClickEvent {
 
 /***/ }),
 
-/***/ "./src/searchUI_script/Controller/controller.js":
-/*!******************************************************!*\
-  !*** ./src/searchUI_script/Controller/controller.js ***!
-  \******************************************************/
+/***/ "./src/searchUI/Controller/controller.js":
+/*!***********************************************!*\
+  !*** ./src/searchUI/Controller/controller.js ***!
+  \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -417,10 +417,10 @@ class Controller {
 
 /***/ }),
 
-/***/ "./src/searchUI_script/Model/model.js":
-/*!********************************************!*\
-  !*** ./src/searchUI_script/Model/model.js ***!
-  \********************************************/
+/***/ "./src/searchUI/Model/model.js":
+/*!*************************************!*\
+  !*** ./src/searchUI/Model/model.js ***!
+  \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -451,10 +451,10 @@ class Model {
 
 /***/ }),
 
-/***/ "./src/searchUI_script/View/view.js":
-/*!******************************************!*\
-  !*** ./src/searchUI_script/View/view.js ***!
-  \******************************************/
+/***/ "./src/searchUI/View/view.js":
+/*!***********************************!*\
+  !*** ./src/searchUI/View/view.js ***!
+  \***********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
