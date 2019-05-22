@@ -1,10 +1,8 @@
 .carousel-outContainer {
-  border: solid;
   padding: 30px 70px 48px;
 }
 
 .carousel-inContainer {
-  border: solid;
   overflow: hidden;
 }
 
@@ -77,7 +75,6 @@
 }
 
 .carousel-right {
-  border: solid;
   overflow: hidden;
 }
 
