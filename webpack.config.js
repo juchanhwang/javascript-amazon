@@ -15,7 +15,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: "./src/amazon.html",
-      filename: "amazon.html"
+      filename: "index.html"
     })
   ],
   module: {
