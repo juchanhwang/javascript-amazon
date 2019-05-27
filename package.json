@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "webpack -w"
+    "build": "webpack"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
