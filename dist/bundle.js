@@ -86,6 +86,28 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/amazon.css":
+/*!************************!*\
+  !*** ./src/amazon.css ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "./src/carouselUI/css/carousel.css":
+/*!*****************************************!*\
+  !*** ./src/carouselUI/css/carousel.css ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "./src/carouselUI/js/carousel.js":
 /*!***************************************!*\
   !*** ./src/carouselUI/js/carousel.js ***!
@@ -505,14 +527,28 @@ class View {
 
 /***/ }),
 
-/***/ 0:
-/*!***************************!*\
-  !*** multi ./src/main.js ***!
-  \***************************/
+/***/ "./src/searchUI/style/autocomplete.css":
+/*!*********************************************!*\
+  !*** ./src/searchUI/style/autocomplete.css ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./src/main.js */"./src/main.js");
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 0:
+/*!********************************************************************************************************************!*\
+  !*** multi ./src/main.js ./src/amazon.css ./src/carouselUI/css/carousel.css ./src/searchUI/style/autocomplete.css ***!
+  \********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ./src/main.js */"./src/main.js");
+__webpack_require__(/*! ./src/amazon.css */"./src/amazon.css");
+__webpack_require__(/*! ./src/carouselUI/css/carousel.css */"./src/carouselUI/css/carousel.css");
+module.exports = __webpack_require__(/*! ./src/searchUI/style/autocomplete.css */"./src/searchUI/style/autocomplete.css");
 
 
 /***/ })

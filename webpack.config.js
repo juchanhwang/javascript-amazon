@@ -3,14 +3,13 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: ["./src/main.js"],
+  entry: ["./src/main.js", "./src/amazon.css", "./src/carouselUI/css/carousel.css", "./src/searchUI/style/autocomplete.css"],
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
   },
   plugins: [
     new MiniCssExtractPlugin({
-      // template: ["./src/amazon.css"],
       filename: "app.css"
     }),
     new HtmlWebpackPlugin({
@@ -33,7 +32,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "style-loader", "css-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
         exclude: /node_modules/
       }
     ]
