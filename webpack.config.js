@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: ["./src/main.js"],
+  entry: ["./src/main.js", "./src/amazon.css"],
   output: {
     path: path.resolve(__dirname, "dist/js"),
     filename: "bundle.js"
@@ -22,7 +22,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        include: [path.resolve(__dirname, "src/html")],
+        include: [path.resolve(__dirname, "src/js")],
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",

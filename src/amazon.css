@@ -45,7 +45,6 @@ header {
   height: 30px;
 }
 
-
 /* header-top RIGHT */
 
 #header-top-right {
@@ -520,14 +519,13 @@ input[type=radio] {}
   width: 1400px;
 }
 
-#prime-membership-header {
+.body-prime-header {
   background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/marketing/prime/detail_page/Header_01._CB513133335_.png");
-  height: 396px;
-  padding: 32px 0 48px 0;
+  padding: 32px 30px;
   width: 1400px;
 }
 
-#prime-membership-header>h1 {
+.body-prime-header>h1 {
   line-height: 50px;
   color: #fff;
   font-size: 42px;
@@ -601,4 +599,54 @@ input[type=radio] {}
   color: #fff;
   height: 50px;
   width: 80px;
+}
+
+.body-prime-guide-lists {
+  position: relative;
+  top: -70px;
+  text-align: center;
+  list-style: none;
+}
+
+.body-prime-guide-lists>li {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.guide-list__btn {
+  position: relative;
+  width: 150px;
+  height: 200px;
+  border: none;
+}
+
+.guide-list__btn1 {
+  background: linear-gradient(35deg, rgb(10, 130, 210), rgb(30, 170, 180));
+}
+
+.guide-list__btn2 {
+  background: linear-gradient(35deg, rgb(230, 50, 30), rgb(230, 120, 50));
+}
+
+.guide-list__btn3 {
+  background: linear-gradient(35deg, rgb(104, 14, 56), rgb(226, 57, 122));
+}
+
+.guide-list__btn4 {
+  background: linear-gradient(35deg, rgb(16, 92, 69), rgb(70, 200, 140));
+}
+
+.guide-list__btn5 {
+  background: linear-gradient(35deg, rgb(204, 46, 7), rgb(243, 199, 53));
+}
+
+.guide-list__img {
+  width: 120px;
+  height: 140px;
+}
+
+.guide-list__btn>span {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
 }
