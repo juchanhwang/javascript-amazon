@@ -20,6 +20,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.txt$/i,
+        use: 'raw-loader',
+      },
+      {
         test: /\.js$/,
         include: [path.resolve(__dirname, "src/js")],
         exclude: /node_modules/,

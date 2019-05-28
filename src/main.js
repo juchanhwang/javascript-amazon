@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function getAjax() {
   let ourRequest = new XMLHttpRequest();
-  ourRequest.open("GET", "./json.txt");
+  ourRequest.open("GET", "https://raw.githubusercontent.com/juchanhwang/javascript-amazon/master/src/json.txt");
   ourRequest.addEventListener("load", () => {
     if (ourRequest.status >= 200 && ourRequest.status < 400) {
       let ourData = JSON.parse(ourRequest.responseText);
