@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  margin: 0 auto;
 }
 
 header {
@@ -11,7 +12,7 @@ header {
 
 #header-top {
   padding-top: 13px;
-  width: 1680px;
+  /* width: 1680px; */
   height: 39px;
 }
 
@@ -25,14 +26,9 @@ header {
 }
 
 #header-amazon-logo {
+  margin: 0;
   height: 26px;
-  width: 147px;
   padding: 0 18px 0 27px;
-}
-
-#header-amazon-logo>a {
-  width: 97px;
-  height: 30px;
 }
 
 #header-amazon-logo>a>span {
@@ -51,7 +47,6 @@ header {
   float: right;
   height: 39px;
   position: relative;
-  width: 420px;
 }
 
 #header-top-right-img {
@@ -62,7 +57,6 @@ header {
 /* header-bottom-nav */
 
 #header-bottom-nav {
-  width: 1680px;
   height: 50px;
   padding-top: 10px;
 }
@@ -70,10 +64,10 @@ header {
 /* header-bottom-nav LEFT */
 
 #nav-left {
-  height: 40px;
   position: relative;
+  height: 40px;
+  padding-right: 70px;
   float: left;
-  width: 192px;
 }
 
 #nav-location {
@@ -100,7 +94,6 @@ header {
 #nav-middle {
   position: relative;
   float: left;
-  width: 1068px;
   height: 40px;
 }
 
@@ -143,10 +136,10 @@ header {
 /* header-bottom-nav RIGHT */
 
 #nav-right {
-  float: right;
-  height: 40px;
   position: relative;
-  width: 420px;
+  height: 40px;
+  padding-right: 40px;
+  float: right;
 }
 
 #nav-list {
@@ -286,8 +279,7 @@ body {
   line-height: 19px;
   color: #111;
   font-family: Arial, sans-serif;
-  width: 1680px;
-  height: 4309px;
+  /* width: 1680px; */
   margin: 0;
 }
 
@@ -405,7 +397,7 @@ body {
 .card-container span {
   margin-top: 72px;
   float: left;
-  padding: 0 152px;
+  padding: 0 151px;
   font-weight: 300;
   font-size: 20pt;
 }
@@ -512,7 +504,6 @@ input[type=radio] {}
 
 #body-main-content {
   font-size: 13px;
-  height: 3325px;
   margin: 0 140px;
   padding: 0;
   position: relative;
@@ -547,6 +538,7 @@ input[type=radio] {}
 }
 
 .button-tryprime {
+  margin: 0;
   background: #ffa724;
   border-width: 1px;
   border-style: solid;
@@ -592,7 +584,7 @@ input[type=radio] {}
 #prime-logo {
   height: 50px;
   width: 80px;
-  margin-bottom: 32px;
+  margin: 0 0 32px;
 }
 
 #prime-logo>img {

@@ -48,27 +48,6 @@
   transition: all, 93ms;
 }
 
-/* .carousel-ul.autoPlay{
-  position: relative;
-  animation-duration: 6s;
-  animation-name: myAnimation;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-}
-
-.pausePlay {
-
-  animation-play-state : paused;
-}
-
-@keyframes myAnimation {
-  0%   {left: 0px;}
-  25%  {left: -280px;}
-  50%  {left: -560px;}
-  75%  {left: -840px;}
-  100% {left: 0px;}
-} */
-
 .carousel-li img {
   height: 210px;
   float: left;
@@ -87,7 +66,7 @@
 }
 
 .carousel-text-body {
-  width: 500px;
+  padding-right: 53px;
   font-size: 18px;
   font-weight: 300;
   line-height: 25px;
