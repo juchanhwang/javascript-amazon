@@ -358,9 +358,11 @@ body {
   width: 100%;
 }
 
-.see-more-plans {
+.prime-header-a>a {
+
   text-align: center;
   color: #fff;
+  text-decoration-line: none
 }
 
 /* plan-card */
@@ -504,7 +506,6 @@ input[type=radio] {}
 
 #body-main-content {
   font-size: 13px;
-  margin: 0 140px;
   padding: 0;
   position: relative;
   width: 1400px;
@@ -570,18 +571,17 @@ input[type=radio] {}
   font-weight: bold;
 }
 
-#see-more-plans {
+.see-more-plans {
   height: 19px;
-  font-size: 14px;
   margin: 0 0 34px;
   width: 500px;
-}
-
-#see-more-plans>a {
   color: #fff;
 }
 
+
 #prime-logo {
+  position: relative;
+  top: 20px;
   height: 50px;
   width: 80px;
   margin: 0 0 32px;
