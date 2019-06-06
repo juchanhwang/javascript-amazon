@@ -12,8 +12,8 @@ export default class Carousel {
     this.moveL = carouselArgs['moveL'];
     this.initialVal = carouselArgs['initialVal'];
     this.autoMove;
-    this.true = 1;
-    this.false = 0;
+    this.play = 1;
+    this.pause = 0;
     this.isPause = 0;
   }
 
@@ -59,9 +59,9 @@ export default class Carousel {
 
   stopInterval() {
     clearInterval(this.autoMove);
-    if (this.isPause === this.true) {
+    if (this.isPause === this.play) {
       setTimeout(() => {
-        this.isPause = this.false;
+        this.isPause = this.pause;
         this.moveAuto();
       }, this.timeout);
     }
