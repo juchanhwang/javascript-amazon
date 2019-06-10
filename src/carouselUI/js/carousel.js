@@ -1,24 +1,31 @@
 export default class Carousel {
   constructor(carouselArgs) {
-    this.carouselSpeed = carouselArgs['carouselSpeed'];
-    this.carouselUl = carouselArgs['carouselUl'];
-    this.carouselScrollArrowR = carouselArgs['carouselScrollArrowR'];
-    this.carouselScrollArrowL = carouselArgs['carouselScrollArrowL'];
-    this.timeout = carouselArgs['timeout'];
-    this.lastItem = carouselArgs['lastItem'];
-    this.firstItem = carouselArgs['firstItem'];
+    this.carouselSpeed = carouselArgs["carouselSpeed"];
+    this.carouselUl = carouselArgs["carouselUl"];
+    this.carouselScrollArrowR = carouselArgs["carouselScrollArrowR"];
+    this.carouselScrollArrowL = carouselArgs["carouselScrollArrowL"];
+    this.timeout = carouselArgs["timeout"];
+    this.lastItem = carouselArgs["lastItem"];
+    this.firstItem = carouselArgs["firstItem"];
     this.xValue = this.firstItem;
-    this.moveR = carouselArgs['moveR'];
-    this.moveL = carouselArgs['moveL'];
-    this.initialVal = carouselArgs['initialVal'];
+    this.moveR = carouselArgs["moveR"];
+    this.moveL = carouselArgs["moveL"];
+    this.initialVal = carouselArgs["initialVal"];
     this.autoMove;
     this.play = 1;
     this.pause = 0;
     this.isPause = 0;
   }
 
+  init() {
+    this.getInfiniteCarousel();
+    this.moveCarouselL();
+    this.moveCarouselR();
+    this.moveAuto();
+  }
+
   moveCarouselL() {
-    this.carouselScrollArrowL.addEventListener('click', () => {
+    this.carouselScrollArrowL.addEventListener("click", () => {
       this.moveVal(this.moveL, this.firstItem, this.lastItem);
       this.isPause++;
       this.stopInterval();
@@ -26,7 +33,7 @@ export default class Carousel {
   }
 
   moveCarouselR() {
-    this.carouselScrollArrowR.addEventListener('click', () => {
+    this.carouselScrollArrowR.addEventListener("click", () => {
       this.moveVal(this.moveR, this.lastItem, this.firstItem);
       this.isPause++;
       this.stopInterval();
@@ -65,12 +72,5 @@ export default class Carousel {
         this.moveAuto();
       }, this.timeout);
     }
-  }
-
-  init() {
-    this.getInfiniteCarousel();
-    this.moveCarouselL();
-    this.moveCarouselR();
-    this.moveAuto();
   }
 }
