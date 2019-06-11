@@ -359,7 +359,6 @@ body {
 }
 
 .prime-header-a>a {
-
   text-align: center;
   color: #fff;
   text-decoration-line: none
@@ -578,7 +577,6 @@ input[type=radio] {}
   color: #fff;
 }
 
-
 #prime-logo {
   position: relative;
   top: 20px;
@@ -641,4 +639,40 @@ input[type=radio] {}
   font-size: 20px;
   color: #fff;
   font-weight: 400;
+}
+
+footer {
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  padding: 0 25px;
+  line-height: 60px;
+  float: left;
+  color: #DDD;
+  border-top: 1px solid #dee5e7;
+  background-color: #131A22;
+}
+
+footer>ul {
+  text-align: center;
+}
+
+.footer-list {
+  display: inline-block;
+  padding: 0 10px;
+  list-style: none;
+}
+
+.github-mail > a {
+  color: #DDD;
+  text-decoration: none;
+}
+
+.github-mail > a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.copyright {
+  color: #999;
 }
