@@ -144,7 +144,6 @@ header {
 
 #nav-list {
   float: left;
-  /* height: 50px; */
   padding: 6px 7px 0 32px;
   text-decoration: none;
   margin-top: 2px;
@@ -279,7 +278,6 @@ body {
   line-height: 19px;
   color: #111;
   font-family: Arial, sans-serif;
-  /* width: 1680px; */
   margin: 0;
 }
 
